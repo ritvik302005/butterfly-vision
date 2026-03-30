@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap');
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-olive: #5A5A40;
+  --color-brand-cream: #f5f5f0;
+  --color-brand-ink: #1a1a1a;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    --color-brand-olive: #b8c2a3;
+    --color-brand-cream: #0f1720;
+    --color-brand-ink: #f3f4f6;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-brand-cream text-brand-ink font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  .dark body {
+    background:
+      radial-gradient(circle at top left, rgba(184, 194, 163, 0.12), transparent 28%),
+      radial-gradient(circle at right center, rgba(90, 90, 64, 0.18), transparent 22%),
+      linear-gradient(180deg, #0f1720 0%, #111827 100%);
+  }
+
+  .dark .bg-white {
+    background-color: #18222d !important;
+  }
+
+  .dark .bg-stone-100,
+  .dark .bg-sky-50,
+  .dark .bg-orange-50,
+  .dark .bg-emerald-50 {
+    background-color: #18222d !important;
+  }
+
+  .dark .text-white {
+    color: #f9fafb !important;
+  }
+
+  .dark img {
+    opacity: 0.98;
+  }
+
+  .dark input,
+  .dark select {
+    color: #f3f4f6;
+  }
+
+  .dark ::placeholder {
+    color: rgba(243, 244, 246, 0.55);
+  }
+}

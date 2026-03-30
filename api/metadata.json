@@ -1,0 +1,7 @@
+{
+  "name": "ButterflyID: Butterfly Species Classifier",
+  "description": "A robust butterfly image classification tool using AI to identify species and support biodiversity monitoring and ecological research.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
